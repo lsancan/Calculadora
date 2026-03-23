@@ -17,6 +17,9 @@ public class Calculadora {
 	}
 	
 	public double dividir(int a, int b) {
-		return (double)a/b;
+	    if (b == 0) {
+	        throw new IllegalArgumentException("No se puede dividir entre 0");
+	    }
+	    return (double) a / b;
 	}
 }
